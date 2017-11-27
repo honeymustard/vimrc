@@ -37,6 +37,13 @@ highlight ColorColumn ctermbg=11 guibg=#ffff00
 " Custom commands
 command Now put =strftime('%s')         " Generates unix timestamp
 
+" Customize Plugins
+
+" Add Ag support to ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -47,6 +54,7 @@ Plugin 'tpope/vim-fugitive'             " Git wrapper
 Plugin 'sgur/vim-editorconfig'          " Editorconfig support
 Plugin 'scrooloose/nerdtree'            " File exploration
 Plugin 'vim-airline/vim-airline'        " Status tabline
+Plugin 'mileszs/ack.vim'                " Search tool
 
 " Syntax & Formatting
 Plugin 'pangloss/vim-javascript'        " JavaScript highlighting
