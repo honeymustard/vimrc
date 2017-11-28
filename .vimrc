@@ -18,9 +18,18 @@ set expandtab
 set number
 set colorcolumn=80
 set noerrorbells
-set belloff=all
+set visualbell
+set t_vb=
 set background=dark
 set guifont=Monospace\ 11
+
+" Automatic commands
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
+" Custom commands
+command Now put =strftime('%s')         " Generates unix timestamp
 
 " Color scheme
 highlight clear
@@ -33,9 +42,6 @@ highlight Statement term=NONE gui=NONE ctermfg=11 guifg=#ffff00
 highlight Type term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
 highlight LineNr ctermfg=11 guifg=#ffff00
 highlight ColorColumn ctermbg=11 guibg=#ffff00
-
-" Custom commands
-command Now put =strftime('%s')         " Generates unix timestamp
 
 " Customize Plugins
 
