@@ -32,16 +32,19 @@ endif
 command Now put =strftime('%s')         " Generates unix timestamp
 
 " Color scheme
-highlight clear
-highlight Normal ctermfg=15 ctermbg=235 guibg=#262626 guifg=#ffffff
-highlight Comment term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
-highlight Identifier term=bold ctermfg=14 guifg=#34e2e2
-highlight Constant term=underline ctermfg=13 guifg=#ad7fa8
-highlight PreProc term=underline ctermfg=81 guifg=#5fd7ff
-highlight Statement term=NONE gui=NONE ctermfg=11 guifg=#ffff00
-highlight Type term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
-highlight LineNr ctermfg=11 guifg=#ffff00
-highlight ColorColumn ctermbg=11 guibg=#ffff00
+hi clear
+hi Normal ctermfg=15 ctermbg=235 guibg=#262626 guifg=#ffffff
+hi Comment term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
+hi Identifier term=bold ctermfg=14 guifg=#34e2e2
+hi Constant term=NONE ctermfg=13 guifg=#ad7fa8
+hi PreProc term=NONE ctermfg=81 guifg=#5fd7ff
+hi Statement term=NONE gui=NONE ctermfg=11 guifg=#ffff00
+hi Type term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
+hi LineNr ctermfg=11 guifg=#ffff00
+hi ColorColumn ctermbg=11 guibg=#ffff00
+hi Visual ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
+hi Search ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
+hi Cursor term=NONE ctermfg=bg ctermbg=fg guifg=#262626 guibg=#ffffff
 
 " Customize Plugins
 
