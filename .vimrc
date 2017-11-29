@@ -23,6 +23,9 @@ set t_vb=
 set background=dark
 set guifont=Monospace\ 11
 
+" Variables
+let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
+
 " Automatic commands
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
