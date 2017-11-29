@@ -53,6 +53,7 @@ hi Visual ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
 hi Search ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
 hi Cursor term=NONE ctermfg=bg ctermbg=fg guifg=#262626 guibg=#ffffff
 hi NonText ctermfg=14 guifg=#34e2e2
+hi Directory ctermfg=14 guifg=#34e2e2
 
 " Customize Plugins
 
