@@ -28,7 +28,11 @@ let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
 
 " Automatic commands
 if has('autocmd')
+  " Removes bells for Gvim/MacVim
   autocmd GUIEnter * set visualbell t_vb=
+
+  " Forces all .md files to be read as Markdown
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 endif
 
 " Custom commands
