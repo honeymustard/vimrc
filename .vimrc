@@ -36,7 +36,7 @@ if has('autocmd')
 endif
 
 " Custom commands
-command Now put =strftime('%s')         " Generates unix timestamp
+command Now normal! i<c-r>=strftime('%s')<cr><esc> " Insert unix timestamp
 
 " Color scheme
 hi clear
