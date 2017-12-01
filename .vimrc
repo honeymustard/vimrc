@@ -30,6 +30,7 @@ let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
 " Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>cs :nohlsearch<cr>
 
 " Automatic commands
 if has('autocmd')
