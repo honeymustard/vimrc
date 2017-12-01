@@ -24,7 +24,11 @@ set background=dark
 set guifont=Monospace\ 11
 
 " Variables
+let mapleader = '-'
 let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
+
+" Mappings
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " Automatic commands
 if has('autocmd')
