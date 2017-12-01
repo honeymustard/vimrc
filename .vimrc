@@ -29,6 +29,7 @@ let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
 
 " Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Automatic commands
 if has('autocmd')
@@ -40,7 +41,7 @@ if has('autocmd')
 endif
 
 " Custom commands
-command Now normal! i<c-r>=strftime('%s')<cr><esc> " Insert unix timestamp
+command! Now normal! i<c-r>=strftime('%s')<cr><esc> " Insert unix timestamp
 
 " Color scheme
 hi clear
