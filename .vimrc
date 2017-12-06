@@ -26,13 +26,17 @@ set guifont=Monospace\ 11
 " Variables
 let mapleader = '-'
 let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
+let g:NERDTreeWinSize=60
 
 " Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :write<cr><esc> :source $MYVIMRC<cr>
 nnoremap <leader>cs :nohlsearch<cr>
+nnoremap <leader>nn :NERDTreeToggle<cr>
+nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <tab> :bnext<cr>
+nnoremap <s-tab> :bprevious<cr>
 
-" Automatic commands
 if has('autocmd')
   " Removes bells for Gvim/MacVim
   autocmd GUIEnter * set visualbell t_vb=
@@ -43,6 +47,8 @@ endif
 
 " Custom commands
 command! Now normal! i<c-r>=strftime('%s')<cr><esc> " Insert unix timestamp
+command! Tabs :set noet|retab!                      " Indent with tabs
+command! Spaces :set et|retab!                      " Indent with spaces
 
 " Color scheme
 hi clear
