@@ -4,10 +4,16 @@
 " @author Adrian Solumsmo
 "
 """""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""
+" Settings
+"
+"""""""""""""""""""""""""""""
+
 syn on
 filetype off
 
-" Settings
 set nocompatible
 set ruler
 set tabstop=4
@@ -23,34 +29,61 @@ set t_vb=
 set background=dark
 set guifont=Monospace\ 11
 
-" Variables
-let mapleader = '-'
-let macvim_skip_colorscheme=1           " Fixes colorscheme for MacVim
-let g:NERDTreeWinSize=60
 
+"""""""""""""""""""""""""""""
+" Variables
+"
+"""""""""""""""""""""""""""""
+
+let mapleader = '-'
+let macvim_skip_colorscheme = 1
+
+
+"""""""""""""""""""""""""""""
 " Mappings
+"
+"""""""""""""""""""""""""""""
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :write<cr><esc> :source $MYVIMRC<cr>
 nnoremap <leader>cs :nohlsearch<cr>
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
-nnoremap <tab> :bnext<cr>
-nnoremap <s-tab> :bprevious<cr>
+nnoremap <tab>      :bnext<cr>
+nnoremap <s-tab>    :bprevious<cr>
 
-if has('autocmd')
-  " Removes bells for Gvim/MacVim
-  autocmd GUIEnter * set visualbell t_vb=
 
-  " Forces all .md files to be read as Markdown
-  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-endif
+"""""""""""""""""""""""""""""
+" Auto commands
+"
+"""""""""""""""""""""""""""""
 
+" Removes bells for Gvim/MacVim
+au GUIEnter * set visualbell t_vb=
+
+" Forces all .md files to be read as Markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
+
+
+"""""""""""""""""""""""""""""
 " Custom commands
-command! Now normal! i<c-r>=strftime('%s')<cr><esc> " Insert unix timestamp
-command! Tabs :set noet|retab!                      " Indent with tabs
-command! Spaces :set et|retab!                      " Indent with spaces
+"
+" Now       Insert unix timestamp
+" Tabs      Indent with tabs
+" Spaces    Indent with sapces
+"
+"""""""""""""""""""""""""""""
 
+command! Now normal! i<c-r>=strftime('%s')<cr><esc>
+command! Tabs :set noet|retab!
+command! Spaces :set et|retab!
+
+
+"""""""""""""""""""""""""""""
 " Color scheme
+"
+"""""""""""""""""""""""""""""
+
 hi clear
 hi Normal ctermfg=15 ctermbg=235 guibg=#262626 guifg=#ffffff
 hi Comment term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
@@ -67,14 +100,12 @@ hi Cursor term=NONE ctermfg=bg ctermbg=fg guifg=#262626 guibg=#ffffff
 hi NonText ctermfg=14 guifg=#34e2e2
 hi Directory ctermfg=14 guifg=#34e2e2
 
-" Customize Plugins
 
-" Add Ag support to ack.vim
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
+"""""""""""""""""""""""""""""
+" Vundle plugins
+"
+"""""""""""""""""""""""""""""
 
-" Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -94,3 +125,17 @@ Plugin 'derekwyatt/vim-scala'           " Scala highlighting
 
 call vundle#end()
 filetype plugin indent on
+
+
+"""""""""""""""""""""""""""""
+" Customize plugins
+"
+"""""""""""""""""""""""""""""
+
+" Add Ag support to ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+let g:NERDTreeWinSize    = 60
+let g:NERDTreeShowHidden = 1
