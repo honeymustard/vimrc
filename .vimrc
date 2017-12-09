@@ -1,15 +1,15 @@
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimrc
 "
 " @author Adrian Solumsmo
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syn on
 filetype off
@@ -30,19 +30,25 @@ set background=dark
 set guifont=Monospace\ 11
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Variables
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader = '-'
 let macvim_skip_colorscheme = 1
+let g:NERDTreeWinSize = 60
+let g:NERDTreeShowHidden = 1
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :write<cr><esc> :source $MYVIMRC<cr>
@@ -53,10 +59,10 @@ nnoremap <tab>      :bnext<cr>
 nnoremap <s-tab>    :bprevious<cr>
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto commands
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Removes bells for Gvim/MacVim
 au GUIEnter * set visualbell t_vb=
@@ -65,24 +71,24 @@ au GUIEnter * set visualbell t_vb=
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom commands
 "
 " Now       Insert unix timestamp
 " Tabs      Indent with tabs
-" Spaces    Indent with sapces
+" Spaces    Indent with spaces
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 command! Now normal! i<c-r>=strftime('%s')<cr><esc>
 command! Tabs :set noet|retab!
 command! Spaces :set et|retab!
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 hi clear
 hi Normal ctermfg=15 ctermbg=235 guibg=#262626 guifg=#ffffff
@@ -101,10 +107,10 @@ hi NonText ctermfg=14 guifg=#34e2e2
 hi Directory ctermfg=14 guifg=#34e2e2
 
 
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle plugins
 "
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -125,17 +131,3 @@ Plugin 'derekwyatt/vim-scala'           " Scala highlighting
 
 call vundle#end()
 filetype plugin indent on
-
-
-"""""""""""""""""""""""""""""
-" Customize plugins
-"
-"""""""""""""""""""""""""""""
-
-" Add Ag support to ack.vim
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-let g:NERDTreeWinSize    = 60
-let g:NERDTreeShowHidden = 1
