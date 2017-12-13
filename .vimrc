@@ -92,20 +92,24 @@ command! Spaces :set et|retab!
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 hi clear
-hi Normal ctermfg=15 ctermbg=235 guibg=#262626 guifg=#ffffff
-hi Comment term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
-hi Identifier term=bold ctermfg=14 guifg=#34e2e2
-hi Constant term=NONE ctermfg=13 guifg=#ad7fa8
-hi PreProc term=NONE ctermfg=81 guifg=#5fd7ff
-hi Statement term=NONE gui=NONE ctermfg=11 guifg=#ffff00
-hi Type term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
-hi LineNr ctermfg=11 guifg=#ffff00
-hi ColorColumn ctermbg=11 guibg=#ffff00
-hi Visual ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
-hi Search ctermfg=235 ctermbg=11 guifg=#262626 guibg=#ffff00
-hi Cursor term=NONE ctermfg=bg ctermbg=fg guifg=#262626 guibg=#ffffff
-hi NonText ctermfg=14 guifg=#34e2e2
-hi Directory ctermfg=14 guifg=#34e2e2
+hi Normal       ctermfg=15 ctermbg=235
+hi Normal       guibg=#262626 guifg=#ffffff
+hi Comment      term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
+hi Identifier   term=bold ctermfg=14 guifg=#34e2e2
+hi Constant     term=NONE ctermfg=13 guifg=#ad7fa8
+hi PreProc      term=NONE ctermfg=81 guifg=#5fd7ff
+hi Statement    term=NONE gui=NONE ctermfg=11 guifg=#ffff00
+hi Type         term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
+hi LineNr       ctermfg=11 guifg=#ffff00
+hi ColorColumn  ctermbg=11 guibg=#ffff00
+hi Visual       ctermfg=235 ctermbg=11
+hi Visual       guifg=#262626 guibg=#ffff00
+hi Search       ctermfg=235 ctermbg=11
+hi Search       guifg=#262626 guibg=#ffff00
+hi Cursor       term=NONE ctermfg=bg ctermbg=fg
+hi Cursor       guifg=#262626 guibg=#ffffff
+hi NonText      ctermfg=14 guifg=#34e2e2
+hi Directory    ctermfg=14 guifg=#34e2e2
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
