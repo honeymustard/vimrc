@@ -39,6 +39,7 @@ let mapleader = '-'
 let macvim_skip_colorscheme = 1
 let g:NERDTreeWinSize = 60
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['\.swp$']
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
