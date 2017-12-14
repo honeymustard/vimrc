@@ -93,24 +93,38 @@ command! Spaces :set et|retab!
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 hi clear
-hi Normal       ctermfg=15 ctermbg=235
-hi Normal       guibg=#262626 guifg=#ffffff
-hi Comment      term=NONE gui=NONE ctermfg=14 guifg=#34e2e2
-hi Identifier   term=bold ctermfg=14 guifg=#34e2e2
-hi Constant     term=NONE ctermfg=13 guifg=#ad7fa8
-hi PreProc      term=NONE ctermfg=81 guifg=#5fd7ff
-hi Statement    term=NONE gui=NONE ctermfg=11 guifg=#ffff00
-hi Type         term=NONE gui=NONE ctermfg=121 guifg=#87ffaf
-hi LineNr       ctermfg=11 guifg=#ffff00
-hi ColorColumn  ctermbg=11 guibg=#ffff00
-hi Visual       ctermfg=235 ctermbg=11
-hi Visual       guifg=#262626 guibg=#ffff00
-hi Search       ctermfg=235 ctermbg=11
-hi Search       guifg=#262626 guibg=#ffff00
-hi Cursor       term=NONE ctermfg=bg ctermbg=fg
-hi Cursor       guifg=#262626 guibg=#ffffff
-hi NonText      ctermfg=14 guifg=#34e2e2
-hi Directory    ctermfg=14 guifg=#34e2e2
+
+" Terminal colors
+hi Normal       cterm=none ctermfg=15  ctermbg=235
+hi Comment      cterm=none ctermfg=14
+hi Identifier   cterm=bold ctermfg=14
+hi Constant     cterm=none ctermfg=13
+hi PreProc      cterm=none ctermfg=81
+hi Statement    cterm=none ctermfg=11
+hi Type         cterm=none ctermfg=121
+hi LineNr       cterm=none ctermfg=11
+hi ColorColumn  cterm=none ctermfg=235 ctermbg=11
+hi Visual       cterm=none ctermfg=235 ctermbg=11
+hi Search       cterm=none ctermfg=235 ctermbg=11
+hi Cursor       cterm=none ctermfg=235 ctermbg=15
+hi NonText      cterm=none ctermfg=14
+hi Directory    cterm=none ctermfg=14
+
+" GUI colors
+hi Normal       gui=none guifg=#ffffff guibg=#262626
+hi Comment      gui=none guifg=#34e2e2
+hi Identifier   gui=bold guifg=#34e2e2
+hi Constant     gui=none guifg=#ad7fa8
+hi PreProc      gui=none guifg=#5fd7ff
+hi Statement    gui=none guifg=#ffff00
+hi Type         gui=none guifg=#87ffaf
+hi LineNr       gui=none guifg=#ffff00
+hi ColorColumn  gui=none guifg=#262626 guibg=#ffff00
+hi Visual       gui=none guifg=#262626 guibg=#ffff00
+hi Search       gui=none guifg=#262626 guibg=#ffff00
+hi Cursor       gui=none guifg=#262626 guibg=#ffffff
+hi NonText      gui=none guifg=#34e2e2
+hi Directory    gui=none guifg=#34e2e2
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
