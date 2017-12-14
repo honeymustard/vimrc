@@ -97,7 +97,7 @@ hi clear
 " Terminal colors
 hi Normal       cterm=none ctermfg=15  ctermbg=235
 hi Comment      cterm=none ctermfg=14
-hi Identifier   cterm=bold ctermfg=14
+hi Identifier   cterm=none ctermfg=14
 hi Constant     cterm=none ctermfg=13
 hi PreProc      cterm=none ctermfg=81
 hi Statement    cterm=none ctermfg=11
@@ -113,7 +113,7 @@ hi Directory    cterm=none ctermfg=14
 " GUI colors
 hi Normal       gui=none guifg=#ffffff guibg=#262626
 hi Comment      gui=none guifg=#34e2e2
-hi Identifier   gui=bold guifg=#34e2e2
+hi Identifier   gui=none guifg=#34e2e2
 hi Constant     gui=none guifg=#ad7fa8
 hi PreProc      gui=none guifg=#5fd7ff
 hi Statement    gui=none guifg=#ffff00
