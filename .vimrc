@@ -23,6 +23,7 @@ set hlsearch
 set expandtab
 set number
 set colorcolumn=80
+set ignorecase
 set noerrorbells
 set visualbell
 set t_vb=
