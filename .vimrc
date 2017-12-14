@@ -118,7 +118,7 @@ call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'           " Vundle plugin manager
 Plugin 'tpope/vim-fugitive'             " Git wrapper
-Plugin 'sgur/vim-editorconfig'          " Editorconfig support
+Plugin 'editorconfig/editorconfig-vim'  " Editorconfig support
 Plugin 'scrooloose/nerdtree'            " File exploration
 Plugin 'vim-airline/vim-airline'        " Status tabline
 Plugin 'mileszs/ack.vim'                " Search tool
