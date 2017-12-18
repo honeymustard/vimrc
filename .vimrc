@@ -38,9 +38,13 @@ set guifont=Monospace\ 11
 
 let mapleader = '-'
 let macvim_skip_colorscheme = 1
+
 let g:NERDTreeWinSize = 60
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['\.swp$']
+let g:startify_custom_header = [
+    \ '   The mustardsphere has you!',
+    \ ]
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -136,13 +140,14 @@ hi Directory    gui=none guifg=#34e2e2
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins
+" Utilities
 Plugin 'VundleVim/Vundle.vim'           " Vundle plugin manager
 Plugin 'tpope/vim-fugitive'             " Git wrapper
 Plugin 'editorconfig/editorconfig-vim'  " Editorconfig support
 Plugin 'scrooloose/nerdtree'            " File exploration
 Plugin 'vim-airline/vim-airline'        " Status tabline
 Plugin 'mileszs/ack.vim'                " Search tool
+Plugin 'mhinz/vim-startify'             " Welcome screen
 
 " Syntax & Formatting
 Plugin 'pangloss/vim-javascript'        " JavaScript highlighting
