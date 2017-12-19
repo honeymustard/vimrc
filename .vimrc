@@ -77,6 +77,12 @@ au GUIEnter * set visualbell t_vb=
 " Forces all .md files to be read as Markdown
 au BufNewFile,BufReadPost *.md set filetype=markdown
 
+" Enable folding for Vimscript files
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Custom commands
