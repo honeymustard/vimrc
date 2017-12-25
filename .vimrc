@@ -29,6 +29,7 @@ set visualbell
 set t_vb=
 set background=dark
 set guifont=Monospace\ 11
+set modeline
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
