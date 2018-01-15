@@ -146,23 +146,29 @@ hi Directory    gui=none guifg=#34e2e2
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+let vhome = '~/.vim/bundle/Vundle.vim'
 
-" Utilities
-Plugin 'VundleVim/Vundle.vim'           " Vundle plugin manager
-Plugin 'tpope/vim-fugitive'             " Git wrapper
-Plugin 'editorconfig/editorconfig-vim'  " Editorconfig support
-Plugin 'scrooloose/nerdtree'            " File exploration
-Plugin 'vim-airline/vim-airline'        " Status tabline
-Plugin 'mileszs/ack.vim'                " Search tool
-Plugin 'mhinz/vim-startify'             " Welcome screen
+if isdirectory(expand(vhome))
 
-" Syntax & Formatting
-Plugin 'pangloss/vim-javascript'        " JavaScript highlighting
-Plugin 'mxw/vim-jsx'                    " JSX highlighting
-Plugin 'posva/vim-vue'                  " Vue highlighting
-Plugin 'derekwyatt/vim-scala'           " Scala highlighting
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-call vundle#end()
-filetype plugin indent on
+    " Utilities
+    Plugin 'VundleVim/Vundle.vim'           " Vundle plugin manager
+    Plugin 'tpope/vim-fugitive'             " Git wrapper
+    Plugin 'editorconfig/editorconfig-vim'  " Editorconfig support
+    Plugin 'scrooloose/nerdtree'            " File exploration
+    Plugin 'vim-airline/vim-airline'        " Status tabline
+    Plugin 'mileszs/ack.vim'                " Search tool
+    Plugin 'mhinz/vim-startify'             " Welcome screen
+
+    " Syntax & Formatting
+    Plugin 'pangloss/vim-javascript'        " JavaScript highlighting
+    Plugin 'mxw/vim-jsx'                    " JSX highlighting
+    Plugin 'posva/vim-vue'                  " Vue highlighting
+    Plugin 'derekwyatt/vim-scala'           " Scala highlighting
+
+    call vundle#end()
+    filetype plugin indent on
+
+endif
