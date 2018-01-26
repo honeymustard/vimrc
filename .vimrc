@@ -62,6 +62,7 @@ nnoremap <leader>sv :write<cr><esc> :source $MYVIMRC<cr>
 nnoremap <leader>cs :nohlsearch<cr>
 nnoremap <leader>f  :20winc ><cr>
 nnoremap <leader>d  :20winc <<cr>
+nnoremap <leader>st :Startify<cr>
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
 nnoremap <leader>nq :NERDTreeFind<cr><esc> :bd<cr>
