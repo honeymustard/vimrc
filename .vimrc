@@ -169,6 +169,7 @@ if isdirectory(expand(vhome))
     Plugin 'posva/vim-vue'                  " Vue highlighting
     Plugin 'derekwyatt/vim-scala'           " Scala highlighting
     Plugin 'leafgarland/typescript-vim'     " Typescript highlighting
+    Plugin 'OrangeT/vim-csharp'             " C-Sharp highlighting
 
     call vundle#end()
     filetype plugin indent on
